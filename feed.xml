@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://theframedrop.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://theframedrop.com/" rel="alternate" type="text/html" /><updated>2016-06-28T00:42:37+09:00</updated><id>http://theframedrop.com/</id><title>The Frame Drop</title><subtitle>Optimizing and Troubleshooting Mobile Games</subtitle><entry xml:lang="kr"><title>모바일 GPU 종류</title><link href="http://theframedrop.com/2016/06/27/mobile-gpu-types.kr/" rel="alternate" type="text/html" title="모바일 GPU 종류" /><published>2016-06-27T09:30:00+09:00</published><updated>2016-06-27T09:30:00+09:00</updated><id>http://theframedrop.com/2016/06/27/mobile-gpu-types.kr</id><content type="html" xml:base="http://theframedrop.com/2016/06/27/mobile-gpu-types.kr/">&lt;h1 id=&quot;gpu-&quot;&gt;모바일 GPU의 종류&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://theframedrop.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://theframedrop.com/" rel="alternate" type="text/html" /><updated>2016-06-28T00:44:02+09:00</updated><id>http://theframedrop.com/</id><title>The Frame Drop</title><subtitle>Optimizing and Troubleshooting Mobile Games</subtitle><entry xml:lang="kr"><title>모바일 GPU 종류</title><link href="http://theframedrop.com/2016/06/27/mobile-gpu-types.kr/" rel="alternate" type="text/html" title="모바일 GPU 종류" /><published>2016-06-27T09:30:00+09:00</published><updated>2016-06-27T09:30:00+09:00</updated><id>http://theframedrop.com/2016/06/27/mobile-gpu-types.kr</id><content type="html" xml:base="http://theframedrop.com/2016/06/27/mobile-gpu-types.kr/">&lt;h1 id=&quot;gpu-&quot;&gt;모바일 GPU의 종류&lt;/h1&gt;
 
 &lt;p&gt;2016년 현재 모바일 GPU는 크게 아래의 3가지 종류가 시장을 차지하고 있습니다.&lt;/p&gt;
 
@@ -18,7 +18,7 @@
   &lt;li&gt;&lt;a href=&quot;http://hwstats.unity3d.com/mobile/gpu.html&quot;&gt;http://hwstats.unity3d.com/mobile/gpu.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;이 정보는 유니티로 빌드한 게임에서 보내는 분석 데이타 (Analytics Data)를 사용해서 구성한 통계 데이타입니다. 참고로 무료 버전의 유니티로 빌드한 게임은 반드시 분석 데이타를 보내게 되어 있고, 유료 버전은 옵션으로 끌 수 있습니다.&lt;/p&gt;
+&lt;p&gt;이 정보는 유니티로 빌드한 게임에서 보내는 분석 데이타 (Analytics Data)를 사용해서 구성한 통계 데이타입니다. 무료 버전의 유니티로 빌드한 게임은 반드시 분석 데이타를 보내게 되어 있고, 유료 버전은 옵션으로 끌 수 있습니다.&lt;/p&gt;
 
 &lt;h1 id=&quot;gpu----&quot;&gt;GPU 아키텍쳐 및 최적화 자료&lt;/h1&gt;
 
