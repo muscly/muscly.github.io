@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Optimizing and Troubleshooting Mobile Games">
 
-    <title>The Frame Drop</title>
+    <title>모바일 GPU 종류 - The Frame Drop</title>
 
-    <link rel="canonical" href="http://theframedrop.com/index.kr/">
+    <link rel="canonical" href="http://theframedrop.com/2016/06/27/mobile-gpu-types.kr/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -41,11 +41,9 @@
 	<!-- Multilingual -->
 	
 	
+		<link rel="alternate" hreflang="kr" href="/2016/06/27/mobile-gpu-types.kr/" />
 	
 	
-		<link rel="alternate" hreflang="en" href="/" />
-	
-		<link rel="alternate" hreflang="kr" href="/index.kr/" />
 	
 </head>
 
@@ -88,16 +86,12 @@
 				<!-- Language selector (Posts)-->
 				
 				
+				<li>
+					<a href="/2016/06/27/mobile-gpu-types.kr/" class="kr lang-sel">kr</a>
+				</li>
+				
 				<!-- Language selector (Pages)-->
 				
-				
-				<li>
-					<a href="/" class="en lang-sel">en</a>
-				</li>
-				
-				<li>
-					<a href="/index.kr/" class="kr lang-sel">kr</a>
-				</li>
 				
             </ul>
         </div>
@@ -107,54 +101,105 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-bg-06.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>The Frame Drop</h1>
-                    <hr class="small">
-                    <span class="subheading">모바일 게임 최적화와 트러블슈팅</span>
+                <div class="post-heading">
+                    <h1>모바일 GPU 종류</h1>
+                    
+                    <h2 class="subheading">모바일의 GPU의 종류와 점유율, GPU별 최적화 자료</h2>
+                    
+					<!-- multilingual date -->
+					
+						<span class="meta">이현창&nbsp;&nbsp; 2016-06-27 </span>
+					
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2016/06/27/mobile-gpu-types.kr/">
-        <h2 class="post-title">            모바일 GPU 종류
-        </h2>
-         
-        <h3 class="post-subtitle">
-            모바일의 GPU의 종류와 점유율, GPU별 최적화 자료
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by 이현창 on June 27, 2016</p>
-</div>
-<hr>
+				<h1 id="gpu-">모바일 GPU의 종류</h1>
+
+<p>2016년 현재 모바일 GPU는 크게 아래의 3가지 종류가 시장을 차지하고 있습니다.</p>
+
+<ul>
+  <li>ImageTec PowerVR</li>
+  <li>ARM Mali</li>
+  <li>Qualcomm Adreno</li>
+</ul>
+
+<p>iOS 기기는 모두 ImageTec PowerVR을 사용하고 있고 안드로이드 기기는 다양하게 사용합니다.</p>
+
+<h1 id="section">유니티 사이트에서 점유율 확인하는 방법</h1>
+
+<p>아래 주소에서 모바일 GPU의 점유율을 확인할 수 있습니다.</p>
+
+<ul>
+  <li><a href="http://hwstats.unity3d.com/mobile/gpu.html">http://hwstats.unity3d.com/mobile/gpu.html</a></li>
+</ul>
+
+<p>이 정보는 유니티로 빌드한 게임에서 보내는 분석 데이타 (Analytics Data)를 사용해서 구성한 통계 데이타입니다. 참고로 무료 버전의 유니티로 빌드한 게임은 반드시 분석 데이타를 보내게 되어 있고, 유료 버전은 옵션으로 끌 수 있습니다.</p>
+
+<h1 id="gpu----">GPU 아키텍쳐 및 최적화 자료</h1>
+
+<p>GPU 벤더에서 제공하는 아키텍쳐 설명 및 최적화 가이드 자료입니다. GPU의 세세한 차이를 비교하고 공부하는 용도보다는 요즘의 모바일 GPU가 어떻게 구성되는지, 각 벤더에서 공통적으로 제안하는 가이드라인은 무엇인지 확인하는 용도로 쓰면 좋을 것 같습니다.</p>
+
+<ul>
+  <li><a href="http://community.imgtec.com/developers/powervr/documentation/">http://community.imgtec.com/developers/powervr/documentation/</a></li>
+  <li><a href="http://infocenter.arm.com/help/topic/com.arm.doc.dui0555a/DUI0555A_mali_optimization_guide.pdf">http://infocenter.arm.com/help/topic/com.arm.doc.dui0555a/DUI0555A_mali_optimization_guide.pdf</a></li>
+  <li><a href="http://malideveloper.arm.com/downloads/Mali_Optimization_Guide_3.0.pdf">http://malideveloper.arm.com/downloads/Mali_Optimization_Guide_3.0.pdf</a></li>
+  <li><a href="https://developer.qualcomm.com/download/adreno-opengl-es-developer-guide.pdf">https://developer.qualcomm.com/download/adreno-opengl-es-developer-guide.pdf</a></li>
+</ul>
 
 
-<!-- Pager -->
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/06/25/hello-jekyll/" data-toggle="tooltip" data-placement="top" title="Hello, Jekyll">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
 
 
-
-		</div>
-	</div>
-</div>
 
 <hr>
 
 
     <!-- Disqus -->
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+		this.page.url = "http://theframedrop.com/2016/06/27/mobile-gpu-types.kr/";
+		this.page.identifier = "/2016/06/27/mobile-gpu-types.kr";
+    };
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//theframedrop.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 
 

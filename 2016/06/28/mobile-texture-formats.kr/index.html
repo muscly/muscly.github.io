@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Optimizing and Troubleshooting Mobile Games">
 
-    <title>The Frame Drop</title>
+    <title>모바일 텍스쳐 포맷 - The Frame Drop</title>
 
-    <link rel="canonical" href="http://theframedrop.com/index.kr/">
+    <link rel="canonical" href="http://theframedrop.com/2016/06/28/mobile-texture-formats.kr/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -41,11 +41,9 @@
 	<!-- Multilingual -->
 	
 	
+		<link rel="alternate" hreflang="kr" href="/2016/06/28/mobile-texture-formats.kr/" />
 	
 	
-		<link rel="alternate" hreflang="en" href="/" />
-	
-		<link rel="alternate" hreflang="kr" href="/index.kr/" />
 	
 </head>
 
@@ -88,16 +86,12 @@
 				<!-- Language selector (Posts)-->
 				
 				
+				<li>
+					<a href="/2016/06/28/mobile-texture-formats.kr/" class="kr lang-sel">kr</a>
+				</li>
+				
 				<!-- Language selector (Pages)-->
 				
-				
-				<li>
-					<a href="/" class="en lang-sel">en</a>
-				</li>
-				
-				<li>
-					<a href="/index.kr/" class="kr lang-sel">kr</a>
-				</li>
 				
             </ul>
         </div>
@@ -107,54 +101,84 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-bg-06.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>The Frame Drop</h1>
-                    <hr class="small">
-                    <span class="subheading">모바일 게임 최적화와 트러블슈팅</span>
+                <div class="post-heading">
+                    <h1>모바일 텍스쳐 포맷</h1>
+                    
+                    <h2 class="subheading">어떤 텍스쳐 포맷을 사용해야 할까요?</h2>
+                    
+					<!-- multilingual date -->
+					
+						<span class="meta">이현창&nbsp;&nbsp; 2016-06-28 </span>
+					
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2016/06/27/mobile-gpu-types.kr/">
-        <h2 class="post-title">            모바일 GPU 종류
-        </h2>
-         
-        <h3 class="post-subtitle">
-            모바일의 GPU의 종류와 점유율, GPU별 최적화 자료
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by 이현창 on June 27, 2016</p>
-</div>
-<hr>
+				<h1 id="section">텍스쳐 포맷 결정의 어려움</h1>
+<p>ㅁㄴㄹㄴㅇㄹㄴㅇㄹ</p>
 
-
-<!-- Pager -->
+<h1 id="section-1">텍스쳐 포맷의 종류</h1>
+<p>ㅁㄴㄹㅁㄴㅇㄹㄴㅇㄹ
+# 공통 포맷 ETC1, ETC2
+ㅁㄴㅇㄹㄴㅇㄹㄴㅁㅇㄹ
+# ETC1과 알파블랜딩
+ㅁㅇㄹㄴㅇㅁㄹㅁㄴㅇㄹ
+# 가이드</p>
 
 
 
-		</div>
-	</div>
-</div>
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/06/28/mobile-gpu-types.kr/" data-toggle="tooltip" data-placement="top" title="모바일 GPU 종류">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
 
 <hr>
 
 
     <!-- Disqus -->
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+		this.page.url = "http://theframedrop.com/2016/06/28/mobile-texture-formats.kr/";
+		this.page.identifier = "/2016/06/28/mobile-texture-formats.kr";
+    };
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//theframedrop.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 
 

@@ -1,1 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://theframedrop.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://theframedrop.com/" rel="alternate" type="text/html" /><updated>2016-06-27T20:04:59+09:00</updated><id>http://theframedrop.com/</id><title>The Frame Drop</title><subtitle>Optimizing and Troubleshooting Mobile Games</subtitle><entry xml:lang="en"><title>Hello, Jekyll</title><link href="http://theframedrop.com/2016/06/25/hello-jekyll/" rel="alternate" type="text/html" title="Hello, Jekyll" /><published>2016-06-25T04:00:00+09:00</published><updated>2016-06-25T04:00:00+09:00</updated><id>http://theframedrop.com/2016/06/25/hello-jekyll</id><content type="html" xml:base="http://theframedrop.com/2016/06/25/hello-jekyll/">&lt;p&gt;This is my first post in The Frame Drop.&lt;/p&gt;</content><author><name>LEE, Hyun-chang</name></author><summary>This is my first post in The Frame Drop.</summary></entry><entry xml:lang="kr"><title>반갑다 지킬</title><link href="http://theframedrop.com/2016/06/25/hello-jekyll.kr/" rel="alternate" type="text/html" title="반갑다 지킬" /><published>2016-06-25T04:00:00+09:00</published><updated>2016-06-25T04:00:00+09:00</updated><id>http://theframedrop.com/2016/06/25/hello-jekyll.kr</id><content type="html" xml:base="http://theframedrop.com/2016/06/25/hello-jekyll.kr/">&lt;p&gt;The Frame Drop에 쓰는 첫번째 포스트입니다.&lt;/p&gt;</content><author><name>이현창</name></author><summary>The Frame Drop에 쓰는 첫번째 포스트입니다.</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://theframedrop.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://theframedrop.com/" rel="alternate" type="text/html" /><updated>2016-06-28T00:31:55+09:00</updated><id>http://theframedrop.com/</id><title>The Frame Drop</title><subtitle>Optimizing and Troubleshooting Mobile Games</subtitle><entry xml:lang="kr"><title>모바일 GPU 종류</title><link href="http://theframedrop.com/2016/06/27/mobile-gpu-types.kr/" rel="alternate" type="text/html" title="모바일 GPU 종류" /><published>2016-06-27T09:30:00+09:00</published><updated>2016-06-27T09:30:00+09:00</updated><id>http://theframedrop.com/2016/06/27/mobile-gpu-types.kr</id><content type="html" xml:base="http://theframedrop.com/2016/06/27/mobile-gpu-types.kr/">&lt;h1 id=&quot;gpu-&quot;&gt;모바일 GPU의 종류&lt;/h1&gt;
+
+&lt;p&gt;2016년 현재 모바일 GPU는 크게 아래의 3가지 종류가 시장을 차지하고 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ImageTec PowerVR&lt;/li&gt;
+  &lt;li&gt;ARM Mali&lt;/li&gt;
+  &lt;li&gt;Qualcomm Adreno&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;iOS 기기는 모두 ImageTec PowerVR을 사용하고 있고 안드로이드 기기는 다양하게 사용합니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;유니티 사이트에서 점유율 확인하는 방법&lt;/h1&gt;
+
+&lt;p&gt;아래 주소에서 모바일 GPU의 점유율을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://hwstats.unity3d.com/mobile/gpu.html&quot;&gt;http://hwstats.unity3d.com/mobile/gpu.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 정보는 유니티로 빌드한 게임에서 보내는 분석 데이타 (Analytics Data)를 사용해서 구성한 통계 데이타입니다. 참고로 무료 버전의 유니티로 빌드한 게임은 반드시 분석 데이타를 보내게 되어 있고, 유료 버전은 옵션으로 끌 수 있습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;gpu----&quot;&gt;GPU 아키텍쳐 및 최적화 자료&lt;/h1&gt;
+
+&lt;p&gt;GPU 벤더에서 제공하는 아키텍쳐 설명 및 최적화 가이드 자료입니다. GPU의 세세한 차이를 비교하고 공부하는 용도보다는 요즘의 모바일 GPU가 어떻게 구성되는지, 각 벤더에서 공통적으로 제안하는 가이드라인은 무엇인지 확인하는 용도로 쓰면 좋을 것 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://community.imgtec.com/developers/powervr/documentation/&quot;&gt;http://community.imgtec.com/developers/powervr/documentation/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://infocenter.arm.com/help/topic/com.arm.doc.dui0555a/DUI0555A_mali_optimization_guide.pdf&quot;&gt;http://infocenter.arm.com/help/topic/com.arm.doc.dui0555a/DUI0555A_mali_optimization_guide.pdf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://malideveloper.arm.com/downloads/Mali_Optimization_Guide_3.0.pdf&quot;&gt;http://malideveloper.arm.com/downloads/Mali_Optimization_Guide_3.0.pdf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.qualcomm.com/download/adreno-opengl-es-developer-guide.pdf&quot;&gt;https://developer.qualcomm.com/download/adreno-opengl-es-developer-guide.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>이현창</name></author><summary>모바일 GPU의 종류</summary></entry><entry xml:lang="en"><title>Hello, Jekyll</title><link href="http://theframedrop.com/2016/06/25/hello-jekyll/" rel="alternate" type="text/html" title="Hello, Jekyll" /><published>2016-06-25T04:00:00+09:00</published><updated>2016-06-25T04:00:00+09:00</updated><id>http://theframedrop.com/2016/06/25/hello-jekyll</id><content type="html" xml:base="http://theframedrop.com/2016/06/25/hello-jekyll/">&lt;p&gt;This is my first post in The Frame Drop.&lt;/p&gt;</content><author><name>LEE, Hyun-chang</name></author><summary>This is my first post in The Frame Drop.</summary></entry></feed>
