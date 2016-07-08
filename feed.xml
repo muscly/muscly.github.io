@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://leehc.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://leehc.com/" rel="alternate" type="text/html" /><updated>2016-07-08T18:29:47+09:00</updated><id>http://leehc.com/</id><title>The Frame Drop</title><subtitle>Programmer</subtitle><entry xml:lang="en"><title>Types of Mobile GPU</title><link href="http://leehc.com/2016/06/28/mobile-gpu-types/" rel="alternate" type="text/html" title="Types of Mobile GPU" /><published>2016-06-28T09:30:00+09:00</published><updated>2016-06-28T09:30:00+09:00</updated><id>http://leehc.com/2016/06/28/mobile-gpu-types</id><content type="html" xml:base="http://leehc.com/2016/06/28/mobile-gpu-types/">&lt;h1 id=&quot;mobile-gpu-types&quot;&gt;Mobile GPU Types&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://leehc.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://leehc.com/" rel="alternate" type="text/html" /><updated>2016-07-08T18:31:55+09:00</updated><id>http://leehc.com/</id><title>The Frame Drop</title><subtitle>Programmer</subtitle><entry xml:lang="en"><title>Types of Mobile GPU</title><link href="http://leehc.com/2016/06/28/mobile-gpu-types/" rel="alternate" type="text/html" title="Types of Mobile GPU" /><published>2016-06-28T09:30:00+09:00</published><updated>2016-06-28T09:30:00+09:00</updated><id>http://leehc.com/2016/06/28/mobile-gpu-types</id><content type="html" xml:base="http://leehc.com/2016/06/28/mobile-gpu-types/">&lt;h1 id=&quot;mobile-gpu-types&quot;&gt;Mobile GPU Types&lt;/h1&gt;
 
 &lt;p&gt;The mobile GPU market is dominated by these 3 mobile GPUs.&lt;/p&gt;
 
@@ -10,26 +10,26 @@
 
 &lt;p&gt;All iOS devices have ImageTec PowerVR while Android devices have several types of GPU.&lt;/p&gt;
 
-&lt;h1 id=&quot;how-to-find-market-share-information-on-unity-website&quot;&gt;How to Find Market Share Information on Unity Website&lt;/h1&gt;
+&lt;h1 id=&quot;how-to-find-market-share-information-on-the-unity-website&quot;&gt;How to Find Market Share Information on the Unity Website&lt;/h1&gt;
 
-&lt;p&gt;You can find market share information on the following URL.&lt;/p&gt;
+&lt;p&gt;You can find market share information at the following URL.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://hwstats.unity3d.com/mobile/gpu.html&quot;&gt;http://hwstats.unity3d.com/mobile/gpu.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;These statistic data were collected from Unity games. The games built with free Unity version are forced to send analytics data, while Unity Pro provides an option to disable this feature.&lt;/p&gt;
+&lt;p&gt;This statistical data was collected from Unity games. The games built with the free Unity version are forced to send analytics data, while Unity Pro provides an option to disable this feature.&lt;/p&gt;
 
 &lt;h1 id=&quot;gpu-architecture-and-optimization-resources&quot;&gt;GPU Architecture and Optimization Resources&lt;/h1&gt;
 
-&lt;p&gt;These are resources about architecture and optimization provided by GPU vendors. You can find GPU-specific features, Mobile GPU architectures of these days and common optimization guidelines.&lt;/p&gt;
+&lt;p&gt;These are resources about architecture and optimization provided by GPU vendors. You can find GPU-specific features, modern mobile GPU architecture and common optimization guidelines.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://community.imgtec.com/developers/powervr/documentation/&quot;&gt;http://community.imgtec.com/developers/powervr/documentation/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://infocenter.arm.com/help/topic/com.arm.doc.dui0555a/DUI0555A_mali_optimization_guide.pdf&quot;&gt;http://infocenter.arm.com/help/topic/com.arm.doc.dui0555a/DUI0555A_mali_optimization_guide.pdf&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://malideveloper.arm.com/downloads/Mali_Optimization_Guide_3.0.pdf&quot;&gt;http://malideveloper.arm.com/downloads/Mali_Optimization_Guide_3.0.pdf&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.qualcomm.com/download/adreno-opengl-es-developer-guide.pdf&quot;&gt;https://developer.qualcomm.com/download/adreno-opengl-es-developer-guide.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>LEE, Hyun-chag</name></author><summary>Mobile GPU Types</summary></entry><entry xml:lang="kr"><title>모바일 GPU 종류</title><link href="http://leehc.com/2016/06/28/mobile-gpu-types.kr/" rel="alternate" type="text/html" title="모바일 GPU 종류" /><published>2016-06-28T09:30:00+09:00</published><updated>2016-06-28T09:30:00+09:00</updated><id>http://leehc.com/2016/06/28/mobile-gpu-types.kr</id><content type="html" xml:base="http://leehc.com/2016/06/28/mobile-gpu-types.kr/">&lt;h1 id=&quot;gpu-&quot;&gt;모바일 GPU의 종류&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>LEE, Hyun-chang</name></author><summary>Mobile GPU Types</summary></entry><entry xml:lang="kr"><title>모바일 GPU 종류</title><link href="http://leehc.com/2016/06/28/mobile-gpu-types.kr/" rel="alternate" type="text/html" title="모바일 GPU 종류" /><published>2016-06-28T09:30:00+09:00</published><updated>2016-06-28T09:30:00+09:00</updated><id>http://leehc.com/2016/06/28/mobile-gpu-types.kr</id><content type="html" xml:base="http://leehc.com/2016/06/28/mobile-gpu-types.kr/">&lt;h1 id=&quot;gpu-&quot;&gt;모바일 GPU의 종류&lt;/h1&gt;
 
 &lt;p&gt;2016년 현재 모바일 GPU는 크게 아래의 3가지 종류가 시장을 차지하고 있습니다.&lt;/p&gt;
 
