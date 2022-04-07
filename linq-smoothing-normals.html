@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤫&lt;/text&gt;&lt;/svg&gt;">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3B8EKKV9YC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3B8EKKV9YC');
+</script>
+
+  <title>Linq로 부드러운 노멀 벡터 구하기에 도전,b,&nbsp;|&nbsp;Secret Wiki</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Linq로 부드러운 노멀 벡터 구하기에 도전,b,">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤫&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="happiness .html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;😀&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>행복</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;👨‍💻&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>About</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">Linq로 부드러운 노멀 벡터 구하기에 도전,b,</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Sep 24, 2019</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--pink">
+            <a href="tag/아들과 2인개발.html">아들과 2인개발</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--default">
+            <a href="tag/유니티3D.html">유니티3D</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
+            <a href="tag/Linq.html">Linq</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--gray">
+            <a href="tag/렌더링.html">렌더링</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/419c23b5b71b4f11b0b5e02eae369b00" class="PageRoot"><div id="https://www.notion.so/3b70c0d2702b4c69ab6dd35ac1e3d906" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F61a92ed2-a5a1-4b7d-a73e-4221e054d50e%2FUntitled.png?width=696&amp;table=block&amp;id=3b70c0d2-702b-4c69-ab6d-d35ac1e3d906"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F61a92ed2-a5a1-4b7d-a73e-4221e054d50e%2FUntitled.png?width=696&amp;table=block&amp;id=3b70c0d2-702b-4c69-ab6d-d35ac1e3d906" style="width:696px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">왼쪽: 부드러운 노멀 벡터를 사용한 외곽선, 오른쪽: 모델의 노멀 벡터를 사용한 외곽선</em></span></span></figcaption></figure></div><div id="https://www.notion.so/a2a4772fd1a84d17ab72cc65a39e83de" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">툰 셰이딩에 대한 조사를 마치고 나서 다음 스텝으로 건조기 몬스터를 모델링하고 있습니다. 목업 수준의 초안이 나와서 유니티에 띄워보니 각진 모서리의 경계선이 너무 엉망입니다. 몸통은 나중에 Bevel 툴로 부드럽게 다듬을 계획이라서 괜찮지만, 연통처럼 생긴 팔다리는 더는 버텍스를 늘리지 않을 계획이라서 외곽선 셰이딩을 개선하기로 결정했습니다.</span></span></p></div><div id="https://www.notion.so/ca7210dce73f4cecb98773bbfcf8434a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://codingdad.me/2019/09/18/toon-shading-universalrp/">지난 글</a></span><span class="SemanticString">에서도 얘기했지만, 각진 모서리의 경계선이 이상하게 나오는 이유는 같은 위치의 버텍스라도 서로 다른 방향의 노멀 벡터를 가지고 있기 때문입니다. 아래 그림에서 왼쪽처럼 노멀이 다른 방향을 보고 있으면, 외곽선을 그리기 위해서 버텍스를 이동시킬 때 각각의 방향으로 이동해서 외곽선에 빈틈이 생기게 됩니다.</span></span></p></div><div id="https://www.notion.so/42368b4a51254810abda943842d14034" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe8c9ffa1-cadc-4405-a984-f3f1e3ddde82%2FUntitled.png?width=688&amp;table=block&amp;id=42368b4a-5125-4810-abda-943842d14034"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe8c9ffa1-cadc-4405-a984-f3f1e3ddde82%2FUntitled.png?width=688&amp;table=block&amp;id=42368b4a-5125-4810-abda-943842d14034" style="width:688px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">왼쪽: 각진 노멀, 오른쪽: 부드러운 노멀</em></span></span></figcaption></figure></div><div id="https://www.notion.so/06fc813a5b3c40459df06a6a6508f8a1" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">오른쪽처럼 노멀이 한 곳을 바라보도록 모델링을 하는 방법이 있지만 이렇게 하면 오브젝트 표면의 셰이딩에도 영향을 주기 때문에 외곽선용 노멀을 별도로 보관하는 방법을 사용할 수 있습니다. 저는 모델의 노멀 벡터를 얻어와서 부드러운 노멀 벡터로 변경한 다음에 복사된 모델의 탄젠트 채널에 넣어주는 방식으로 작업했습니다.</span></span></p></div><div id="https://www.notion.so/600f64b2c7e0431491c0524a0f13526c" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">우선, 부드러운 노멀 벡터를 계산하는 방법은 아래와 같습니다.</span></span></p></div><ul class="BulletedListWrapper"><li id="https://www.notion.so/27caebadd3934e9ba1918a4c82f7a27c" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">같은 위치를 공유하는 버텍스들을 그루핑합니다.</span></span></li><li id="https://www.notion.so/f621ef86cd6c4e2a8dcca11213b282f6" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">해당 버텍스들의 노멀 벡터들을 가져와서 평균을 낸 다음, 평균값을 다시 노멀 벡터에 덮어씁니다.</span></span></li></ul><div id="https://www.notion.so/2f85484f3bc446319899967b4ffc41eb" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">방법도 간단하고 관련 코드도 많이 공유되어 있어서 그냥 가져다 쓰면 되는 일이지만, 제 마음 속의 악마가 Linq를 사용하면 한 스테이트먼트에 구현할 수 있을 것 같다고 속삭이는군요. (하나의 스테이트먼트란 하나의 세미콜론으로 끝나는 문장이라고 보시면 됩니다) 정신을 차리고 보니 결코 짧다고는 말할 수 없는 하나의 스테이트먼트를 만들어냈습니다!</span></span></p></div><pre id="https://www.notion.so/f5126b3feabd4cf7949b4145371c24ca" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token comment">// Mesh mesh = ...;</span>
+
+<span class="token class-name">List<span class="token punctuation">&lt;</span>Vector3<span class="token punctuation">></span></span> smoothNormals <span class="token operator">=</span> <span class="token punctuation">(</span>    
+    <span class="token keyword">from</span> avgn_il <span class="token keyword">in</span> <span class="token punctuation">(</span>
+        <span class="token keyword">from</span> v_i <span class="token keyword">in</span> mesh<span class="token punctuation">.</span>vertices<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span>i<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token punctuation">{</span>v<span class="token punctuation">,</span>i<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">join</span> n_i <span class="token keyword">in</span> mesh<span class="token punctuation">.</span>normals<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>i<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token punctuation">{</span>n<span class="token punctuation">,</span>i<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">on</span> v_i<span class="token punctuation">.</span>i equals n_i<span class="token punctuation">.</span>i
+        <span class="token keyword">group</span> n_i <span class="token keyword">by</span> v_i<span class="token punctuation">.</span>v <span class="token keyword">into</span> v__n_i
+        <span class="token keyword">select</span> <span class="token keyword">new</span> <span class="token punctuation">{</span>  
+            avgn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Vector3</span><span class="token punctuation">(</span>v__n_i<span class="token punctuation">.</span><span class="token function">Average</span><span class="token punctuation">(</span>e<span class="token operator">=></span>e<span class="token punctuation">.</span>n<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> v__n_i<span class="token punctuation">.</span><span class="token function">Average</span><span class="token punctuation">(</span>e<span class="token operator">=></span>e<span class="token punctuation">.</span>n<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">,</span> v__n_i<span class="token punctuation">.</span><span class="token function">Average</span><span class="token punctuation">(</span>e<span class="token operator">=></span>e<span class="token punctuation">.</span>n<span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            il<span class="token operator">=</span>v__n_i<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span>e<span class="token operator">=></span>e<span class="token punctuation">.</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">from</span> avgn_i <span class="token keyword">in</span> <span class="token punctuation">(</span> <span class="token keyword">from</span> i <span class="token keyword">in</span> avgn_il<span class="token punctuation">.</span>il <span class="token keyword">select</span> <span class="token keyword">new</span> <span class="token punctuation">{</span> avgn<span class="token operator">=</span>avgn_il<span class="token punctuation">.</span>avgn<span class="token punctuation">,</span> i<span class="token operator">=</span>i<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">orderby</span> avgn_i<span class="token punctuation">.</span>i
+    <span class="token keyword">select</span> avgn_i<span class="token punctuation">.</span>avgn
+    <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></span></span></code></pre><div id="https://www.notion.so/7d6a7df72a814d82af7f2a687256cb47" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">분명히 성공은 성공인데, 사과 껍질을 안 끊기고 한 번에 깍아 낸 것처럼 약간의 뿌듯함과 함께 자괴감이 밀려들었습니다.</span></span></p></div><div id="https://www.notion.so/8c9923714cd6468bb2e42ed114275c9a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">그래도 관심이 있는 분들이 계실 수도 있고, 저도 나중에 보면 기억이 안 날 것 같아서 아래에 주석을 추가해 보았습니다. (참고로, Mesh.vertices와 Mesh.normals는 같은 인덱스를 사용합니다.)</span></span></p></div><pre id="https://www.notion.so/914b2cdf70aa4aca94055ab23c87ff27" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token comment">// 원본 메시를 준비</span>
+<span class="token comment">// Mesh mesh = ...;</span>
+
+<span class="token comment">// 부드러운 노멀 벡터가 저장될 리스트</span>
+<span class="token class-name">List<span class="token punctuation">&lt;</span>Vector3<span class="token punctuation">></span></span> smoothNormals <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token comment">// in 뒤쪽의 괄호를 통해서 얻게 될 리스트의 원소에는 부드러운 노멀(avgn)과 해당 노멀 벡터를 다시 덮어쓸 노멀 벡터 리스트상의 인덱스를 가진 리스트(il)가 있음.</span>
+    <span class="token keyword">from</span> avgn_il <span class="token keyword">in</span> <span class="token punctuation">(</span>
+        <span class="token comment">// 버텍스의 리스트에 인덱스를 붙여주어서 v_i를 얻는다.</span>
+        <span class="token keyword">from</span> v_i <span class="token keyword">in</span> mesh<span class="token punctuation">.</span>vertices<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span>i<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token punctuation">{</span>v<span class="token punctuation">,</span>i<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token comment">// 노멀의 리스트에 인덱스를 붙여주어서 n_i를 얻고, 같은 인덱스의 버텍스와 노멀을 결합한다.</span>
+        <span class="token keyword">join</span> n_i <span class="token keyword">in</span> mesh<span class="token punctuation">.</span>normals<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>i<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token punctuation">{</span>n<span class="token punctuation">,</span>i<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">on</span> v_i<span class="token punctuation">.</span>i equals n_i<span class="token punctuation">.</span>i
+        <span class="token comment">// 버텍스의 위치를 기준으로 노멀과 인덱스를 그루핑해서 v__n_i를 얻는다.</span>
+        <span class="token comment">// v__n_i는 키가 버텍스 위치, 값은 "노멀과 인덱스"의 리스트가 된다.</span>
+        <span class="token keyword">group</span> n_i <span class="token keyword">by</span> v_i<span class="token punctuation">.</span>v <span class="token keyword">into</span> v__n_i
+        <span class="token comment">// 같은 버텍스 위치에 대한 노멀을 모았으므로, 평균을 내서 부드러운 노멀을 만든다.</span>
+        <span class="token keyword">select</span> <span class="token keyword">new</span> <span class="token punctuation">{</span>  
+            <span class="token comment">// 평균낸 노멀. 즉, 부드러운 노멀을 avgn에 저장</span>
+            avgn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Vector3</span><span class="token punctuation">(</span>v__n_i<span class="token punctuation">.</span><span class="token function">Average</span><span class="token punctuation">(</span>e<span class="token operator">=></span>e<span class="token punctuation">.</span>n<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> v__n_i<span class="token punctuation">.</span><span class="token function">Average</span><span class="token punctuation">(</span>e<span class="token operator">=></span>e<span class="token punctuation">.</span>n<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">,</span> v__n_i<span class="token punctuation">.</span><span class="token function">Average</span><span class="token punctuation">(</span>e<span class="token operator">=></span>e<span class="token punctuation">.</span>n<span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token comment">// 평균 계산에 사용했던 노멀들의 인덱스 리스트를 il에 저장</span>
+            il<span class="token operator">=</span>v__n_i<span class="token punctuation">.</span><span class="token function">Select</span><span class="token punctuation">(</span>e<span class="token operator">=></span>e<span class="token punctuation">.</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span>
+    <span class="token comment">// 버텍스 기준으로 그루핑 되었던 것을 풀어서, 부드러운 노멀과 인덱스를 가진 avgn_i를 얻는다</span>
+    <span class="token keyword">from</span> avgn_i <span class="token keyword">in</span> <span class="token punctuation">(</span> <span class="token keyword">from</span> i <span class="token keyword">in</span> avgn_il<span class="token punctuation">.</span>il <span class="token keyword">select</span> <span class="token keyword">new</span> <span class="token punctuation">{</span> avgn<span class="token operator">=</span>avgn_il<span class="token punctuation">.</span>avgn<span class="token punctuation">,</span> i<span class="token operator">=</span>i<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// 인덱스 기준으로 정렬</span>
+    <span class="token keyword">orderby</span> avgn_i<span class="token punctuation">.</span>i
+    <span class="token comment">// 부드러운 노멀만 선택</span>
+    <span class="token keyword">select</span> avgn_i<span class="token punctuation">.</span>avgn
+    <span class="token comment">// List&lt;Vector3> 타입으로 변환</span>
+    <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></span></span></code></pre><div id="https://www.notion.so/7003b2e3a7034d5fbef8e7024570d5d0" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">이렇게 만든 부드러운 노멀은 메시의 탄젠트에 넣으면 됩니다. 아웃라인 셰이더도 노멀이 아닌 탄젠트를 읽도록 수정해줍니다.</span></span></p></div><pre id="https://www.notion.so/9c32e01023524e348b59ef42c1238363" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token keyword">struct</span> <span class="token class-name">Attributes</span> 
+<span class="token punctuation">{</span>
+    float4 positionOS <span class="token operator">:</span> POSITION<span class="token punctuation">;</span>
+    float3 normalOS <span class="token operator">:</span> NORMAL<span class="token punctuation">;</span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression">_OUTLINENORMAL_TANGENT</span></span>
+    float3 tangentOS <span class="token operator">:</span> TANGENT<span class="token punctuation">;</span> <span class="token comment">// 탄젠트 채널 추가</span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Varyings <span class="token function">vert</span><span class="token punctuation">(</span>Attributes input<span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    Varyings output <span class="token operator">=</span> <span class="token punctuation">(</span>Varyings<span class="token punctuation">)</span><span class="token number">0</span><span class="token punctuation">;</span>
+    VertexPositionInputs vertexInput <span class="token operator">=</span> <span class="token function">GetVertexPositionInputs</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span>positionOS<span class="token punctuation">.</span>xyz<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression">_OUTLINENORMAL_TANGENT</span></span>
+    float3 normalOS <span class="token operator">=</span> input<span class="token punctuation">.</span>tangentOS<span class="token punctuation">;</span> <span class="token comment">// 탄젠트를 외곽선용 노멀로 사용</span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">else</span></span>
+    float3 normalOS <span class="token operator">=</span> input<span class="token punctuation">.</span>normalOS<span class="token punctuation">;</span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/2a83884d2551409590cb2e722254020c" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">이렇게 완성된 아웃라인을 감상해보시죠! 왼쪽이 부드러운 노멀을 사용하는 아웃라인입니다.</span></span></p></div><div id="https://www.notion.so/5f6b8072f1ae48db8e49740d5a369620" class="Embed"><div class="Embed__Content"><div class="Embed__ResponsiveContainer" style="width:854px;padding-bottom:56.20608899297424%"><iframe src="https://www.youtube.com/embed/hov1P16Vums?feature=oembed" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" allowfullscreen=""></iframe></div></div><p class="Embed__Caption"><span class="SemanticStringArray"></span></p></div><h1 id="https://www.notion.so/b92062f49e14418db34320b3cd24515f" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/b92062f49e14418db34320b3cd24515f"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">마치며..</span></span></h1><div id="https://www.notion.so/1039a5210f7e49b4abe31f989ba2db30" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">사실 지금 시점에서 외곽선이 중요한 것은 아닌데 쓸데없이 도전정신이 생겨서 딴 길로 샜습니다. 세계 최초로 하나의 스테이트먼트를 사용해서 부드러운 노멀 벡터 만들기에 성공했지만, 상처만 남은 느낌입니다.</span></span></p></div><div id="https://www.notion.so/830ae7992cdc4ac3834bae21f64c5ee6" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">이제는 빨리 진도를 뽑아야 할 것 같습니다. AD 님이 벌써 두 번째 게임의 아이디어를 내놓고 있으니까요.</span></span></p></div></article>
+    
+  <script src="https://utteranc.es/client.js"
+        repo="muscly/utterances"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+    
+  <footer class="Footer">
+  <div>&copy; Secret Wiki 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>

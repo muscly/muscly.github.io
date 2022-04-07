@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤫&lt;/text&gt;&lt;/svg&gt;">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3B8EKKV9YC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3B8EKKV9YC');
+</script>
+
+  <title>Universal RP로 구현한 툰 셰이딩,b,&nbsp;|&nbsp;Secret Wiki</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Universal RP로 구현한 툰 셰이딩,b,">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤫&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="happiness .html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;😀&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>행복</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;👨‍💻&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>About</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">Universal RP로 구현한 툰 셰이딩,b,</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Wed, Sep 18, 2019</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--pink">
+            <a href="tag/아들과 2인개발.html">아들과 2인개발</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--purple">
+            <a href="tag/SRP.html">SRP</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--yellow">
+            <a href="tag/URP.html">URP</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--gray">
+            <a href="tag/렌더링.html">렌더링</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--default">
+            <a href="tag/유니티3D.html">유니티3D</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/79358a1f87874be6a5f44934a8a1a99c" class="PageRoot"><div id="https://www.notion.so/23b14d0af1f442e0a7c2776e7dc3f583" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa64573ca-823a-4dfb-8459-c63c514de957%2FUntitled.png?width=696&amp;table=block&amp;id=23b14d0a-f1f4-42e0-a7c2-776e7dc3f583"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa64573ca-823a-4dfb-8459-c63c514de957%2FUntitled.png?width=696&amp;table=block&amp;id=23b14d0a-f1f4-42e0-a7c2-776e7dc3f583" style="width:696px"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/7c6ba72f2dd947049597b85502d81bc8" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">안녕하세요! 이번에는 Universal Render Pipeline(이하 URP)을 사용한 툰 셰이딩에 대해 얘기해볼까 합니다. 원래는 아들이 그린 원화 느낌을 살리기 위해서 색연필 셰이딩을 해보려고 했지만, 이런저런 벽에 부딪히다가 정신을 차리고 보니 유니티 2019.3 베타 버전과 URP, Renderer Features라고 하는 실험적인 기능으로 툰 셰이딩을 구현하게 되었습니다. 이 글에서는 삽질의 결과물을 마치 원래 알고 있었던 것처럼 자연스럽게 정리해보겠습니다. 완성된 셰이더부터 잠깐 구경하시죠~</span></span></p></div><div id="https://www.notion.so/7f3c4e3c7c7b44149b447ecefb14a924" class="Embed"><div class="Embed__Content"><div class="Embed__ResponsiveContainer" style="width:854px;padding-bottom:56.20608899297424%"><iframe src="https://www.youtube.com/embed/3D90JpKAL44?feature=oembed" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" allowfullscreen=""></iframe></div></div><p class="Embed__Caption"><span class="SemanticStringArray"><span class="SemanticString">완성된 셰이더</span></span></p></div><h1 id="https://www.notion.so/2e619dee16144a1280f8fb125e4a58d7" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/2e619dee16144a1280f8fb125e4a58d7"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">툰 셰이딩</span></span></h1><div id="https://www.notion.so/073d28a058e947f18b21a90fa58ab246" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">셰이딩 알고리즘은 </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://roystan.net/articles/toon-shader.html">이 글</a></span><span class="SemanticString">을 참조했습니다. 디퓨즈, 하이라이트, 림라이트를 두 단계로 층이 지게 만드는 것이 기본 아이디어입니다.</span></span></p></div><div id="https://www.notion.so/af303c0122fc41e1a364a1bbbd7a26fc" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff3048802-fc85-42f4-8cf8-7a33386f9d1e%2FUntitled.png?width=534&amp;table=block&amp;id=af303c01-22fc-41e1-a364-a1bbbd7a26fc"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff3048802-fc85-42f4-8cf8-7a33386f9d1e%2FUntitled.png?width=534&amp;table=block&amp;id=af303c01-22fc-41e1-a364-a1bbbd7a26fc" style="width:534px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">툰 셰이딩 기본 아이디어</em></span></span></figcaption></figure></div><div id="https://www.notion.so/3bb2e4aeec0946a1b8d95c89dc214ce2" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">노멀 벡터와 라이트 벡터를 dot 프로덕트 해서 표면의 밝기 구한 후에 smoothstep을 사용해 두 단계의 밝기로 나눕니다. 아래 셰이더 그래프에서 smoothstep 부분을 보시면 이해가 될 겁니다. 하이라이트와 림 라이트도 같은 방식을 사용해 두 단계로 나눕니다.</span></span></p></div><div id="https://www.notion.so/8a5d17ed2ec74f0eb097addcc59f0345" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F65527d1e-0315-447d-8507-f94cb52882e7%2FUntitled.png?width=696&amp;table=block&amp;id=8a5d17ed-2ec7-4f0e-b097-addcc59f0345"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F65527d1e-0315-447d-8507-f94cb52882e7%2FUntitled.png?width=696&amp;table=block&amp;id=8a5d17ed-2ec7-4f0e-b097-addcc59f0345" style="width:696px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">smoothstep으로 명부와 암부를 명확하게 나눔</em></span></span></figcaption></figure></div><div id="https://www.notion.so/43612e5593e3417791899cd111da93fa" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">추가로 림 라이트가 전체적으로 나오면 외곽선의 느낌이 들기 때문에 밝은 면에만 림 라이트가 나오도록 합니다. 아래 그래프를 보시면 표면의 밝기와 림 라이트를 곱해주고 있습니다.</span></span></p></div><div id="https://www.notion.so/f8ca2a9fe2ad4ee79c5d746cf8a58d40" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3c339796-d7aa-47c4-bdc6-ba5e29b83165%2FUntitled.png?width=696&amp;table=block&amp;id=f8ca2a9f-e2ad-4ee7-9c5d-746cf8a58d40"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3c339796-d7aa-47c4-bdc6-ba5e29b83165%2FUntitled.png?width=696&amp;table=block&amp;id=f8ca2a9f-e2ad-4ee7-9c5d-746cf8a58d40" style="width:696px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">밝은 표면에만 림 라이트가 보이게</em></span></span></figcaption></figure></div><div id="https://www.notion.so/a1032522e0474ecfab1318717370167d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">이 셰이딩 알고리즘을 셰이더 그래프로 옮기는 과정에서는 두 가지 난관이 있었습니다. 그 중 첫 번째는 라이트 정보를 가져오는 노드가 없다는 것인데요, 다행히도 최근에 추가된 커스텀 함수 노드를 사용해서 HLSL 코드를 셰이더 그래프에 임베딩 할 수가 있었습니다. 자세한 방법은 </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://blogs.unity3d.com/2019/07/31/custom-lighting-in-shader-graph-expanding-your-graphs-in-2019/">유니티 블로그</a></span><span class="SemanticString">를 참조하시면 됩니다. 아래가 그 커스텀 함수 노드입니다.</span></span></p></div><div id="https://www.notion.so/9cbe81a844654691ae1075cfea3575b8" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7e3464ed-d2ae-492e-9fff-5b44eef8ad37%2FUntitled.png?width=660&amp;table=block&amp;id=9cbe81a8-4465-4691-ae10-75cfea3575b8"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7e3464ed-d2ae-492e-9fff-5b44eef8ad37%2FUntitled.png?width=660&amp;table=block&amp;id=9cbe81a8-4465-4691-ae10-75cfea3575b8" style="width:660px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">라이트 정보를 얻어오는 커스텀 함수 노드</em></span></span></figcaption></figure></div><div id="https://www.notion.so/0996c657a609436094e423ad5cb1bf2c" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">또 하나의 난관은 어떤 마스터 노드를 쓰느냐! 였습니다. URP에서는 PBR 마스터와 Unlit 마스터 중의 하나를 골라서 사용해야 하는데 두 가지 모두 단점이 있습니다. 최종적으로 Unlit 마스터를 고르기는 했지만 다른 물체의 그림자를 받을 수 없다는 단점이 있습니다. 위의 커스텀 함수에서 Shadow Attenuation을 받아오기는 하지만, 실제로는 셰도우 맵 자체가 전달되지 않습니다.</span></span></p></div><div id="https://www.notion.so/84ec10da608f4bbda5ff7c6bd2906646" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F365cf814-7472-4b23-bfd0-a305a5ab4797%2FUntitled.png?width=660&amp;table=block&amp;id=84ec10da-608f-4bbd-a5ff-7c6bd2906646"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F365cf814-7472-4b23-bfd0-a305a5ab4797%2FUntitled.png?width=660&amp;table=block&amp;id=84ec10da-608f-4bbd-a5ff-7c6bd2906646" style="width:660px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">Unlit 마스터</em></span></span></figcaption></figure></div><div id="https://www.notion.so/c15fdc0bdbb8445e986914c04f05e937" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">PBR 마스터를 쓸 때는 Albedo에 0을 주고 Emission에 커스텀 라이팅 결과를 넣어줘야 하는데, 아무리 Albedo가 0이라도 라이팅에 영향을 주게 됩니다. 아직은 프로토타이핑 단계라서 그냥 넘어가지만, 나중에는 문제가 될 수도 있을 것 같습니다.</span></span></p></div><div id="https://www.notion.so/113e35fdb9a24ce79a460c4d60299de0" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">셰이더 그래프를 쓰면서 가장 좋았던 것은 중간 과정의 프리뷰를 볼 수 있다는 점입니다. 실제 게임 상황이 아니라 프리뷰라는 한계가 있지만, 기존 방식보다 훨씬 효율적으로 문제를 찾을 수 있었습니다. 반면에 연산의 결과를 여기저기서 가져다 쓸 때는 어떤 노드에서 선을 그어야 할지 헷갈렸습니다. 자꾸 쓰다 보면 익숙해질 것 같기는 합니다.</span></span></p></div><h1 id="https://www.notion.so/0c6ff24a99864f78911094f9f05d866f" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/0c6ff24a99864f78911094f9f05d866f"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">아웃라인</span></span></h1><div id="https://www.notion.so/e92b7eca7d6c42d2a5b8aca9c825cb62" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">아웃라인을 그리는 방식은 크게 포스트 프로세싱을 사용하는 방식과 버텍스를 확대해서 한 번 더 그려주는 방식이 있습니다. 아무래도 포스트 프로세싱은 프래그먼트 연산이 많아져서 꺼려지기도 했고 원하는 오브젝트만 아웃라인을 그리고 싶어서 버텍스를 확대하는 방식을 선택했습니다. (참고로, 이 </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://www.youtube.com/watch?v=W3Yg2i17TDo">동영상</a></span><span class="SemanticString">을 보시면 브롤 스타즈에서는 캐릭터를 렌더 텍스쳐에 그린 후에 텍스쳐 상에서 아웃라인을 만든다고 합니다.)</span></span></p></div><div id="https://www.notion.so/a823ea073ca14210ad0712fcc8089313" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">셰이딩 알고리즘은 </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://www.videopoetics.com/tutorials/pixel-perfect-outline-shaders-unity/">이 글</a></span><span class="SemanticString">을 참조했습니다. 기본적인 아이디어는 이렇습니다.</span></span></p></div><ul class="BulletedListWrapper"><li id="https://www.notion.so/1baabe0b207c4b6b862be2cd96e6a983" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">Object Space가 아닌 Clip Space에서 버텍스를 노멀 방향으로 옮겨준다. (2D 상에서 작업하는 효과)</span></span></li><li id="https://www.notion.so/1a9cf4fb80e74a1dac97f4e4df2ff249" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">카메라와의 거리에 따라서 외곽선의 굵기가 변하는 것을 보정하기 위해서 Clip Space 좌표의 w 컴포넌트를 활용한다. (카메라에서 멀수록 w 컴포넌트의 값이 커짐)</span></span></li><li id="https://www.notion.so/98d740616b2d42929f3a54dba304bf72" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">화면 비율에 대응하기 위해서 _ScreenParams를 활용한다.</span></span></li></ul><div id="https://www.notion.so/604426aef2034e7d87417a462f5ac8d6" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">아래는 위의 알고리즘을 구현한 버텍스 셰이더 코드입니다.</span></span></p></div><pre id="https://www.notion.so/9dea9624f4ab4b5984ef3a3fe5c1a453" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span>VertexPositionInputs vertexInput <span class="token operator">=</span> <span class="token function">GetVertexPositionInputs</span><span class="token punctuation">(</span>input<span class="token punctuation">.</span>positionOS<span class="token punctuation">.</span>xyz<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+float3 clipNormal <span class="token operator">=</span> <span class="token function">mul</span><span class="token punctuation">(</span><span class="token punctuation">(</span>float3x3<span class="token punctuation">)</span> UNITY_MATRIX_VP<span class="token punctuation">,</span> <span class="token function">mul</span><span class="token punctuation">(</span><span class="token punctuation">(</span>float3x3<span class="token punctuation">)</span> UNITY_MATRIX_M<span class="token punctuation">,</span> input<span class="token punctuation">.</span>normalOS<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+float2 offset <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>clipNormal<span class="token punctuation">.</span>xy<span class="token punctuation">)</span> <span class="token operator">/</span> _ScreenParams<span class="token punctuation">.</span>xy <span class="token operator">*</span> _Outline <span class="token operator">*</span> vertexInput<span class="token punctuation">.</span>positionCS<span class="token punctuation">.</span>w <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+output<span class="token punctuation">.</span>positionCS <span class="token operator">=</span> vertexInput<span class="token punctuation">.</span>positionCS<span class="token punctuation">;</span>
+output<span class="token punctuation">.</span>positionCS<span class="token punctuation">.</span>xy <span class="token operator">+=</span> offset<span class="token punctuation">;</span></span></span></span></code></pre><div id="https://www.notion.so/d0d5835ac6054cc994efecdf5c6647cd" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">이렇게 노멀 벡터 방향으로 버텍스를 밀어주게 되면, 큐브와 같이 모서리의 노멀이 서로 다른 방향을 바라보는 경우에 외곽선이 끊어지는 현상이 발생합니다. 아래 그림에서 오른쪽 큐브의 모서리를 보면 됩니다.</span></span></p></div><div id="https://www.notion.so/f63bb3f3d7834fa3a2106c980990b67a" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F40b51855-70a3-4383-9a10-32b6c6e7e14c%2FUntitled.png?width=696&amp;table=block&amp;id=f63bb3f3-d783-4fa3-a210-6c980990b67a"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F40b51855-70a3-4383-9a10-32b6c6e7e14c%2FUntitled.png?width=696&amp;table=block&amp;id=f63bb3f3-d783-4fa3-a210-6c980990b67a" style="width:696px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">왼쪽: 외곽선을 부드럽게 모델링한 큐브, 오른쪽: 유니티 기본 큐브 (모서리 부분 외곽선에 빈틈)</em></span></span></figcaption></figure></div><div id="https://www.notion.so/c5a91cb0f2dd445da0b93efeeae566c4" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">해결책으로는 외곽선을 부드럽게 모델링을 하거나 외곽선 용의 노멀을 버텍스의 별도 채널에 저장해두는 방법이 있습니다. 관련해서는 다음 번 포스트에서 설명합니다.</span></span></p></div><div id="https://www.notion.so/e5a9db41ac3a4757917e49d170e38081" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><span class="SemanticString__Fragment SemanticString__Fragment--Resource"><a href="linq-smoothing-normals.html"><span class="SemanticStringArray"><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">Linq로 부드러운 노멀 벡터 구하기에 도전</strong></span></span></a></span></span><span class="SemanticString"> </span></span></p></div><div id="https://www.notion.so/250a25219f72456e9eeabae3c6e4b32a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">이 셰이딩 알고리즘을 기존의 빌트인 파이프라인에서 구현한다면 셰이더에 아웃라인용 패스만 살짝 추가하면 됩니다. 하지만 URP는 멀티 패스로 그리는 것이 간단하지가 않아서 인터넷을 검색하면 멀티 패스와 관련된 문의가 엄청나게 많은 것을 볼 수 있습니다.</span></span></p></div><div id="https://www.notion.so/2cd4e865303346fca89387f8371edc9e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Scriptable Render Pipeline(이하 SRP. URP도 SRP 기반으로 만들어진 것)를 밑단부터 사용해서 직접 렌더링 파이프라인을 만든다면 여러 가지 대안이 있겠지만, URP를 사용할 때는 커스텀 패스를 추가하는 방법이 제일 적절해 보였습니다. 특히 유니티 2019.3에는 Render Features라는 것이 생겨서 코딩 없이도 커스텀 패스를 추가할 수 있게 되었습니다! (이것이 바로 유니티 2019.3 베타로 업그레이드한 이유입니다.)</span></span></p></div><div id="https://www.notion.so/884241c416284e82ada222c933a50fdf" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">관련하여 </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://www.youtube.com/watch?v=jqBtaETaNO4">유니티가 GDC 2019에서 세션</a></span><span class="SemanticString">을 발표했고, </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://github.com/Unity-Technologies/LWRP-CustomRendererExamples">깃허브</a></span><span class="SemanticString">에 예제도 올려두었습니다. 포스트 프로세싱 방식과 버텍스 확장 방식 모두 포함되어 있으니 참고하시면 좋을 것 같습니다. 예제에서는 Object Space에서 버텍스를 밀어주는 간단한 알고리즘을 사용합니다.</span></span></p></div><div id="https://www.notion.so/09bb8b1b38374b40abe9b4e6f6c1b994" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Render Features를 사용해서 아웃라인 패스를 추가하는 방법은 이렇습니다. 우선, UniversalRenderPipelineAsset을 하나 만들어서 Graphics 설정에 지정해 줍니다.</span></span></p></div><div id="https://www.notion.so/8d89b43c10ad4848ba108632407ccf8d" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff224a447-9f61-42e8-abec-d9ca5fb365cf%2FUntitled.png?width=696&amp;table=block&amp;id=8d89b43c-10ad-4848-ba10-8632407ccf8d"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff224a447-9f61-42e8-abec-d9ca5fb365cf%2FUntitled.png?width=696&amp;table=block&amp;id=8d89b43c-10ad-4848-ba10-8632407ccf8d" style="width:696px"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/29f2d817b2224837a311392d0b8eafe8" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">그리고 렌더러 애셋을 만들어서 위의 파이프라인 애셋에 지정해 줍니다.</span></span></p></div><div id="https://www.notion.so/199a8c6871e344fc9b96b821a0657e61" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F75864672-f4b7-42ae-9b83-2c056e96b502%2FUntitled.png?width=696&amp;table=block&amp;id=199a8c68-71e3-44fc-9b96-b821a0657e61"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F75864672-f4b7-42ae-9b83-2c056e96b502%2FUntitled.png?width=696&amp;table=block&amp;id=199a8c68-71e3-44fc-9b96-b821a0657e61" style="width:696px"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/7d99e3fc609145a58c1b6e3c4f6b186e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">마지막으로 렌더러 애셋에는 Render Features에 Render Objects 항목을 추가합니다. Layer Mask에 Mixed.. 이라고 나오는데, 외곽선을 그려줄 오브젝트의 레이어를 선택해주면 됩니다. 그리고 아웃라인용 재질을 지정해줍니다. 이렇게 하면 해당 레이어의 오브젝트들만 Outline 재질을 사용해서 한 번 더 그리게 됩니다.</span></span></p></div><div id="https://www.notion.so/6dacd92cd28c4fdcb25e7ba2f9033436" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0e52f035-162a-4876-ae42-18bfb6423795%2FUntitled.png?width=696&amp;table=block&amp;id=6dacd92c-d28c-4fdc-b25e-7ba2f9033436"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0e52f035-162a-4876-ae42-18bfb6423795%2FUntitled.png?width=696&amp;table=block&amp;id=6dacd92c-d28c-4fdc-b25e-7ba2f9033436" style="width:696px"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/505c81f6066149bb8b3f83b153e0a15e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Event를 보면 After Rendering Opaques로 되어 있는데, 불투명한 오브젝트를 그린 후에 그리라는 뜻입니다. 프레임 디버거로 보면 실제로 그렇게 하고 있습니다.</span></span></p></div><div id="https://www.notion.so/32b8c7932c15464c9c7e4d9ebe98dddf" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F74e1a579-091f-478b-990c-0c702cc4bbe0%2FUntitled.png?width=696&amp;table=block&amp;id=32b8c793-2c15-464c-9c7e-4d9ebe98dddf"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F74e1a579-091f-478b-990c-0c702cc4bbe0%2FUntitled.png?width=696&amp;table=block&amp;id=32b8c793-2c15-464c-9c7e-4d9ebe98dddf" style="width:696px"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/c68a569e20fc42c695adc8cc604ea201" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Renderer Features를 사용해서 외곽선을 그리면 셰이더만 교체하는 것이 아니라 재질을 교체하는 것이라서 오브젝트별로 재질의 프로퍼티를 바꾸는 것은 불가능합니다. 반면에 같은 재질로 그리기 때문에 배칭이 되어서 드로우콜을 줄일 수 있는 장점이 있습니다. (오브젝트별로 외곽선의 두께나 색을 바꾸고 싶다면 버텍스의 별도 채널에 정보를 넣어두는 방식을 사용할 수 있습니다.)</span></span></p></div><div id="https://www.notion.so/c9da9c143ffa4a2da7c9813a9728153b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">(수정) Renderer Features를 사용해도 같은 재질을 그대로 사용하면서 셰이더 패스만 바꿔줄 수 있습니다. 아래 포스트를 참고하세요.</span></span></p></div><div id="https://www.notion.so/b8acf249da184828ab09e3ec30c59f83" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">여기에 링크!</span></span></p></div><div id="https://www.notion.so/11415923eb6c452f8b81f37842e1d19b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">(추가) 전체 셰이더 그래프를 보고 싶다는 분들이 계셔서 이미지로 올려보려고 했는데, 전체 그래프가 한 눈에 보이면서 가독성도 확보하는게 어렵네요. 그래서 github에 올려두었으니 공부하실 분들은 참고하시기 바랍니다. (</span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://github.com/mycodingdad/URPToonShader">https://github.com/mycodingdad/URPToonShader</a></span><span class="SemanticString">)</span></span></p></div><h1 id="https://www.notion.so/877252d13fbe40c59b07a0fe0c7245dc" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/877252d13fbe40c59b07a0fe0c7245dc"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">마치며..</span></span></h1><div id="https://www.notion.so/a05d7eff051e4604a747d28b427f61b8" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">이번 포스트는 여기까지 입니다. 새 기능들을 실험해 보느라 쉬운 일을 어렵게 해낸 느낌입니다.</span></span></p></div><div id="https://www.notion.so/a9318456033a408ebf2e30764ffac421" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">가능한 코딩없이 구현해 보려고 노력해봤는데, 이번과 같이 빠르게 프로토타입을 해볼 때는 유용할 것 같습니다.이번 셰이딩 결과를 AD님(아드님)께 보여줬더니 흔쾌히 컨펌해줬습니다. 요괴메카드로 신나게 놀던 중이라서 자세히 보기는 한 것인지 모르겠네요..</span></span></p></div><div id="https://www.notion.so/94238ab9effb48e782a42212c7054d55" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">긴 글 읽어 주셔서 고맙습니다.</span></span></p></div></article>
+    
+  <script src="https://utteranc.es/client.js"
+        repo="muscly/utterances"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+    
+  <footer class="Footer">
+  <div>&copy; Secret Wiki 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
