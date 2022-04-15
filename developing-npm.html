@@ -65,6 +65,8 @@
     
   
     
+  
+    
       <span class="Navbar__Delim">&centerdot;</span>
       <a href="happiness .html">
         <div class="Navbar__Btn">
@@ -242,8 +244,6 @@
   
     
   
-    
-  
 </nav>
   <header class="Header">
     
@@ -252,8 +252,15 @@
     
     <h1 class="Header__Title">NPM 소스 수정해서 쓰기</h1>
     
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Fri, Apr 15, 2022</span>
+        
+        
+      </div>
+    
   </header>
-  <article id="https://www.notion.so/d0666cc31bf14685b4c96fd6bbbd74a4" class="PageRoot"><div id="https://www.notion.so/b5b9def14ae849c6bebd8171e9de7113" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">블로그를 notab</span></span></p></div></article>
+  <article id="https://www.notion.so/d0666cc31bf14685b4c96fd6bbbd74a4" class="PageRoot"><div id="https://www.notion.so/b5b9def14ae849c6bebd8171e9de7113" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">블로그를 notablog로 이전했다. notablog는 타입 스크립트로 작성되었고, npm 패키지 형태로 배포된다. 몇 가지 수정하고 싶은 부분이 있어서 소스를 받아보았는데, 어디서부터 시작해야할지 모르겠다. node.js는 오래전부터 사용해와서 쉬울 거라 생각했는데, npm 패키지 자체를 수정하는 것은 또 다른 일이다.</span></span></p></div><div id="https://www.notion.so/474abf055a9b45c796f7d7f287c6a599" class="Bookmark"><a href="https://medium.com/@offcode/the-lazy-mans-npm-workflow-e5249b5ee8ba"><h5 class="Bookmark__Title">The lazy man&#x27;s npm workflow</h5><p class="Bookmark__Desc">I develop multiple npm modules in parallel, because I want my code to stay clean and modular. My team members use some of the modules, but not all of them. I want to spend as much time as I can...</p><p class="Bookmark__Link">https://medium.com/@offcode/the-lazy-mans-npm-workflow-e5249b5ee8ba</p></a></div><div id="https://www.notion.so/f31789101e73473aa0decb8f7c653d50" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">이 글을 보면서 따라해 보았는데, 쉬운 방법은 npm link 커맨드를 사용하는 것.</span></span></p></div><div id="https://www.notion.so/7d765210f8884af694c193bf1797f7a0" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">npm 패키지 소스가 있는 디렉토리에서 </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">npm link</code></span><span class="SemanticString">를 실행하면 어딘가에 현재 디레토리가 저장된다. 그 다음에 패키지를 사용할 디렉토리에 가서 </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">npm link {패키지명}</code></span><span class="SemanticString">을 써주면 링크가 생긴다. 로컬 npm을 쓰듯이 쓰면 되는데, 실제로는 링크된 디렉토리에 있는 패키지가 사용되는 것.</span></span></p></div><div id="https://www.notion.so/d0c0d6fe6c684911b6f25955cd60dcb2" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">npm 패키지 소스를 수정한 후에는 </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">npm build</code></span><span class="SemanticString">를 통해서 빌드를 해주어야 한다. notablog는 타입스크립트라서 그런지 빌드를 해야 index.js가 생성된다.</span></span></p></div><div id="https://www.notion.so/24f7ed0268c145e4820f70401ab854a1" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">그리고 notablog는 라이브러리가 아니라 실행파일 형태로 사용해야 하는데, 이 때는 </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">npx notablog</code></span><span class="SemanticString">와 같이 로컬 npm에 있는 실행파일을 실행해줄 수 있다.</span></span></p></div><div id="https://www.notion.so/77b9f974901c48acb48c83f825334883" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">작업이 완료되면 npm 패키지 소스를 github에 올려준다. 이 때는 사용할 머신에 가서 </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">npm install muscly/notablog --save</code></span><span class="SemanticString"> 와 같이 설치해준다.</span></span></p></div><div id="https://www.notion.so/f456605a9fd84c52845d6730fe8a4d62" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
     
   <script src="https://utteranc.es/client.js"
         repo="muscly/utterances"
