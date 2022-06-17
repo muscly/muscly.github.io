@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤫&lt;/text&gt;&lt;/svg&gt;">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3B8EKKV9YC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3B8EKKV9YC');
+</script>
+
+  <title>ML Agents로 점프 플레이어 AI 만들기&nbsp;|&nbsp;Secret Wiki</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="ML Agents로 점프 플레이어 AI 만들기">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤫&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="happiness .html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;😀&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>행복</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;👨‍💻&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>About</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">ML Agents로 점프 플레이어 AI 만들기</h1>
+    
+      <div class="DateTagBar">
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--pink">
+            <a href="tag/아들과 2인개발.html">아들과 2인개발</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--default">
+            <a href="tag/유니티3D.html">유니티3D</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--red">
+            <a href="tag/ML Agent.html">ML Agent</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/141d4f2952234d9d9611f14e640ce5c6" class="PageRoot"><div id="https://www.notion.so/7fddbfb8d7f84b6dbce4b4771ebb352b" class="ColorfulBlock ColorfulBlock--BgGray Callout"><div class="Callout__Icon"><div class="Icon">💡</div></div><p class="Callout__Content"><span class="SemanticStringArray"><span class="SemanticString">정리중인 글입니다</span></span></p></div><h1 id="https://www.notion.so/aa778b2d35e345a0be1501e7531152c7" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/aa778b2d35e345a0be1501e7531152c7"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">설치</span></span></h1><div id="https://www.notion.so/f51165e6971844eb9fd79954be74f4ce" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">ML Agents 깃허브 설명</span></span></p></div><ul class="BulletedListWrapper"><li id="https://www.notion.so/21be09cdcb3f4f21872e6ff80496c091" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Installation.md">https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Installation.md</a></span></span></li></ul><div id="https://www.notion.so/c1f90f897b5c404eb61767cbeecaa87c" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/76949710e802471386d67265ff97c8d2" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">요약</span></span></p></div><ul class="BulletedListWrapper"><li id="https://www.notion.so/e72743dc7d0e4b18b8cf6bd1ab6069b1" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">유니티 패키지 매니저에서 ML Agents 패키지 설치 (2.0.1)</span></span></li><li id="https://www.notion.so/0d213711fbff4c38b33c7a47aec92c5b" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">ml-agents 파이선 패키지 설치 (0.26.0)</span></span><ul class="BulletedListWrapper"><li id="https://www.notion.so/bf0d2d0555634580b447497878b3ece5" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">매칭되는 버전은 여기서 찾기 ⇒ </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://github.com/Unity-Technologies/ml-agents/releases">https://github.com/Unity-Technologies/ml-agents/releases</a></span></span></li><li id="https://www.notion.so/3d12bd1df1bc4fed910eb1b82fef836a" class="BulletedList"><span class="SemanticStringArray"></span></li></ul><pre id="https://www.notion.so/99296fbe0f9e433bae9f07169554c230" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span>$ conda create --name AstroJump
+$ conda activate AstroJump
+<span class="token punctuation">(</span>AstroJump<span class="token punctuation">)</span>$ pip <span class="token function">install</span> <span class="token assign-left variable">mlagents</span><span class="token operator">==</span><span class="token number">0.26</span>.0</span></span></span></code></pre></li></ul><div id="https://www.notion.so/a9ee76768b2b4410b9940c54e460fc50" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">config 파일 준비. 유니티의 Hummingbird 예제에서 가져온 것</span></span></p></div><pre id="https://www.notion.so/f900265ee942449dbcb35f92b1d528a6" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token key atrule">default</span><span class="token punctuation">:</span>
+    <span class="token key atrule">trainer</span><span class="token punctuation">:</span> ppo
+    <span class="token key atrule">batch_size</span><span class="token punctuation">:</span> <span class="token number">1024</span>
+    <span class="token key atrule">beta</span><span class="token punctuation">:</span> <span class="token number">5.0e-3</span>
+    <span class="token key atrule">buffer_size</span><span class="token punctuation">:</span> <span class="token number">10240</span>
+    <span class="token key atrule">epsilon</span><span class="token punctuation">:</span> <span class="token number">0.2</span>
+    <span class="token key atrule">hidden_units</span><span class="token punctuation">:</span> <span class="token number">128</span>
+    <span class="token key atrule">lambd</span><span class="token punctuation">:</span> <span class="token number">0.95</span>
+    <span class="token key atrule">learning_rate</span><span class="token punctuation">:</span> <span class="token number">3.0e-4</span>
+    <span class="token key atrule">learning_rate_schedule</span><span class="token punctuation">:</span> linear
+    <span class="token key atrule">max_steps</span><span class="token punctuation">:</span> <span class="token number">5.0e5</span>
+    <span class="token key atrule">memory_size</span><span class="token punctuation">:</span> <span class="token number">128</span>
+    <span class="token key atrule">normalize</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">num_epoch</span><span class="token punctuation">:</span> <span class="token number">3</span>
+    <span class="token key atrule">num_layers</span><span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token key atrule">time_horizon</span><span class="token punctuation">:</span> <span class="token number">64</span>
+    <span class="token key atrule">sequence_length</span><span class="token punctuation">:</span> <span class="token number">64</span>
+    <span class="token key atrule">summary_freq</span><span class="token punctuation">:</span> <span class="token number">10000</span>
+    <span class="token key atrule">use_recurrent</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">vis_encode_type</span><span class="token punctuation">:</span> simple
+    <span class="token key atrule">reward_signals</span><span class="token punctuation">:</span>
+        <span class="token key atrule">extrinsic</span><span class="token punctuation">:</span>
+            <span class="token key atrule">strength</span><span class="token punctuation">:</span> <span class="token number">1.0</span>
+            <span class="token key atrule">gamma</span><span class="token punctuation">:</span> <span class="token number">0.99</span>
+
+<span class="token key atrule">AstroJump</span><span class="token punctuation">:</span>
+    <span class="token key atrule">time_horizon</span><span class="token punctuation">:</span> <span class="token number">128</span>
+    <span class="token key atrule">batch_size</span><span class="token punctuation">:</span> <span class="token number">2048</span>
+    <span class="token key atrule">buffer_size</span><span class="token punctuation">:</span> <span class="token number">20480</span>
+    <span class="token key atrule">hidden_units</span><span class="token punctuation">:</span> <span class="token number">256</span>
+    <span class="token key atrule">max_steps</span><span class="token punctuation">:</span> <span class="token number">5.0e6</span></span></span></span></code></pre><h1 id="https://www.notion.so/901661d56de24e2783f992a1e6d4fd08" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/901661d56de24e2783f992a1e6d4fd08"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">코드 변경</span></span></h1><div id="https://www.notion.so/6590b24252c640f39e72f15cbd089d13" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">PlayerController를 Agent 상속하게</span></span></p></div><div id="https://www.notion.so/ea085b186f4f47ec8b97ee3ed157b00d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Initialize()에서 초기화</span></span></p></div><div id="https://www.notion.so/53ebf04d371b41d88bc587da87f56f4e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">OnEpisodeBegin()에서 초기화</span></span></p></div><div id="https://www.notion.so/50b994ee2bc34dc0a0c5f6777652d276" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">OnActionReceived()에서 플레이어 조작. 그전에 액션의 의미를 정해야함.</span></span></p></div><div id="https://www.notion.so/4f1abe9ac7ea4d8a86a307f1fe90df17" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">CollectObservation()에서 주변 내용 관찰한 것 입력. 센서의 의미를 정해야함.</span></span></p></div><div id="https://www.notion.so/dcb75c0daba5451ead75c0c8d2232531" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Heuristic()에 매뉴얼 조작 추가. 테스트하거나 게임 직접 조작시에 사용.</span></span></p></div><div id="https://www.notion.so/192dab126f844f59aa634f6ad3bca20a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">의미있는 행동을 했을 때 AddReward() 호출</span></span></p></div><div id="https://www.notion.so/fd188ace69db415c9c637bef8d232d02" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><h1 id="https://www.notion.so/9a43035746d6404ebb86d3f1b8a6be9d" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/9a43035746d6404ebb86d3f1b8a6be9d"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">유니티 설정</span></span></h1><div id="https://www.notion.so/38b96972bd444799a7a3e8805bc385c5" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">BehaviourParameters 컴포넌트 추가</span></span></p></div><div id="https://www.notion.so/c1f02139f76f4a298c28105d29f9cff2" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">자식에 Ray Perception 센서 추가</span></span></p></div><div id="https://www.notion.so/331cd77167524016819363fe0deb7f13" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><h1 id="https://www.notion.so/04a66875e66a42bc84b718a4909010f1" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--1"><a class="Anchor" href="#https://www.notion.so/04a66875e66a42bc84b718a4909010f1"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">학습시작</span></span></h1><div id="https://www.notion.so/3e92b84562ec47d89485518d1b98b59f" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md">https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md</a></span></span></p></div><div id="https://www.notion.so/4b9db8b276d14eba9d5215b69a5eca9a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"></span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">mlagents-learn &lt;trainer-config-file&gt; --env=&lt;env_name&gt; --run-id=&lt;run-identifier&gt;</code></span></span></p></div><div id="https://www.notion.so/9d2f26390b784edeb66b3891f6c898cf" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
+    
+  <script src="https://utteranc.es/client.js"
+        repo="muscly/utterances"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+    
+  <footer class="Footer">
+  <div>&copy; Secret Wiki 2019-2021</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
